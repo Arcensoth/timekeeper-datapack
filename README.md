@@ -35,15 +35,21 @@ Fakeplayer  | Default   | Description
 #### `tkeep.output` objective
 Fakeplayer    | Description
 ------------- | -----------
-`$gametime`   | The number of ticks elapsed in the world.
+`$gametime`   | The total number of ticks elapsed in the world, regardless of tick speed.
 `$daytime`    | The current time-of-day, affected by cycle alterations.
 `$day`        | The number of in-game days elapsed in the world.
 `$moonphase`  | A number `0..7` representing the current [moon phase](#moon-phase-chart).
-`$seconds`    | The number of tick-seconds (20 ticks) elapsed in the world.
-`$minutes`    | The number of tick-minutes (1,200 ticks) elapsed in the world.
-`$hours`      | The number of tick-hours (72,000 ticks) elapsed in the world.
-`$days`       | The number of tick-days (1,728,000 ticks) elapsed in the world.
-`$weeks`      | The number of tick-weeks (12,096,000 ticks) elapsed in the world.
+`$seconds`    | The total number of tick-seconds (20 ticks) elapsed in the world.
+`$minutes`    | The total number of tick-minutes (1,200 ticks) elapsed in the world.
+`$hours`      | The total number of tick-hours (72,000 ticks) elapsed in the world.
+`$days`       | The total number of tick-days (1,728,000 ticks) elapsed in the world.
+`$weeks`      | The total number of tick-weeks (12,096,000 ticks) elapsed in the world.
+`$tick`       | The current, cyclic tick-second (`0..20`).
+`$second`     | The current, cyclic tick-second (`0..1200`).
+`$minute`     | The current, cyclic tick-minute (`0..72000`).
+`$hour`       | The current, cyclic tick-hour (`0..1728000`).
+`$day`        | The current, cyclic tick-day (`0..12096000`).
+`$week`       | The current, cyclic tick-week.
 
 ## Entity Tags
 Entity Tag          | Description
@@ -88,6 +94,10 @@ Value | Image           | Name
 `7`   | ![Moon Phase 7] | Waxing Gibbous
 
 ### Repeating Interval
+These hooks are based on `gametime` and will run regardless of how the day-night cycle runs; i.e. they are unaffected by both the gamerule and modifications to `daytime` (e.g. with `time add` or `time set`).
+
+**Keep in mind that these are not true seconds.** These hooks are based on tick-seconds which are only equivalent to true second under the assumption that game-time is running perfectly synchronized to real-time. Technically speaking this is never truly the case, but for most purposes these assumptions work reasonably well. If you're doing something time-sensitive (e.g. a timer for speedruns) you should not use these hooks.
+
 Function Tag                      | Conditions
 --------------------------------- | -----------
 `#timekeeper:hooks/every/second`  | Run by the server every tick-second (20 ticks).
