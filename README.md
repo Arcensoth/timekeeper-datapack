@@ -36,12 +36,12 @@ Fakeplayer    | Description
 `$hours`      | The total number of tick-hours (72,000 ticks) elapsed in the world.
 `$days`       | The total number of tick-days (1,728,000 ticks) elapsed in the world.
 `$weeks`      | The total number of tick-weeks (12,096,000 ticks) elapsed in the world.
-`$tick`       | The current, cyclic tick-second (`0..20`).
-`$second`     | The current, cyclic tick-second (`0..1200`).
-`$minute`     | The current, cyclic tick-minute (`0..72000`).
-`$hour`       | The current, cyclic tick-hour (`0..1728000`).
-`$day`        | The current, cyclic tick-day (`0..12096000`).
-`$week`       | The current, cyclic tick-week.
+`$tick`       | The current tick-of-the-second (`0..20`).
+`$second`     | The current second-of-the-minute (`0..60`).
+`$minute`     | The current minute-of-the-hour (`0..60`).
+`$hour`       | The current hour-of-the-day (`0..24`).
+`$day`        | The current day-of-the-week (`0..7`).
+`$week`       | The current week, equivalent to `$weeks` in the absence of further granularity.
 
 ## Entity Tags
 Entity Tag          | Description
