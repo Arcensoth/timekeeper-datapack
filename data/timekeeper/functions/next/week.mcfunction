@@ -3,6 +3,9 @@
 # reset current day
 scoreboard players set $day tkeep.output 0
 
+# increment total weeks
+scoreboard players add $weeks tkeep.output 1
+
 # increment current week
 scoreboard players add $week tkeep.output 1
 

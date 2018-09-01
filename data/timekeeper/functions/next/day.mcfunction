@@ -3,6 +3,9 @@
 # reset current hour
 scoreboard players set $hour tkeep.output 0
 
+# increment total days
+scoreboard players add $days tkeep.output 1
+
 # increment current day
 scoreboard players add $day tkeep.output 1
 

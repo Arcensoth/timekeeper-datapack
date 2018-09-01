@@ -3,6 +3,9 @@
 # reset current second
 scoreboard players set $second tkeep.output 0
 
+# increment total minutes
+scoreboard players add $minutes tkeep.output 1
+
 # increment current minute
 scoreboard players add $minute tkeep.output 1
 

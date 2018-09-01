@@ -3,6 +3,9 @@
 # reset current tick
 scoreboard players set $tick tkeep.output 0
 
+# increment total seconds
+scoreboard players add $seconds tkeep.output 1
+
 # increment current second
 scoreboard players add $second tkeep.output 1
 

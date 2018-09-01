@@ -3,6 +3,9 @@
 # reset current minute
 scoreboard players set $minute tkeep.output 0
 
+# increment total hours
+scoreboard players add $hours tkeep.output 1
+
 # increment current hour
 scoreboard players add $hour tkeep.output 1
 
