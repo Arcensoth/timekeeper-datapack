@@ -8,7 +8,6 @@ Namespace   | `timekeeper`
 Scorespace  | `tkeep`
 
 - [Scoreboard](#scoreboard)
-  - [`tkeep.config` objective](#tkeepconfig-objective)
   - [`tkeep.output` objective](#tkeepoutput-objective)
 - [Entity Tags](#entity-tags)
 - [Event Hooks](#event-hooks)
@@ -21,16 +20,9 @@ Scorespace  | `tkeep`
 ## Scoreboard
 Objective       | Criteria  | Usage     | Description
 --------------- | --------- | --------- | -----------
-`tkeep.config`  | `dummy`   | Input     | Reserved for configuration options.
 `tkeep.cache`   | `dummy`   | Read-only | Used to compare previous output values for updates.
 `tkeep.module`  | `dummy`   | Read-only | Reserved for SMF.
 `tkeep.output`  | `dummy`   | Read-only | Contains output values available for reading.
-
-#### `tkeep.config` objective
-Fakeplayer  | Default   | Description
------------ | --------- | -----------
-`$cycle`    | `0`       | How many game ticks to wait before advancing time. Set to `0` to disable.
-`$speed`    | `0`       | By how much to increment time each cycle. Set to `0` to disable.
 
 #### `tkeep.output` objective
 Fakeplayer    | Description
