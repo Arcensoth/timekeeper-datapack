@@ -3,8 +3,8 @@
 # update the cached day
 scoreboard players operation $day tkeep.cache = $day tkeep.output
 
-# update moonphase
-function timekeeper:update/moonphase
+# update moon phase
+function timekeeper:update/moon
 
 # emit event
 function #timekeeper:hooks/newday

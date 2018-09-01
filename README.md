@@ -30,7 +30,7 @@ Fakeplayer    | Description
 `$gametime`   | The total number of ticks elapsed in the world, regardless of tick speed.
 `$daytime`    | The current time-of-day, affected by cycle alterations.
 `$day`        | The number of in-game days elapsed in the world.
-`$moonphase`  | A number `0..7` representing the current [moon phase](#moon-phase-chart).
+`$moon`       | A number `0..7` representing the current [moon phase](#moon-phase-chart).
 `$seconds`    | The total number of tick-seconds (20 ticks) elapsed in the world.
 `$minutes`    | The total number of tick-minutes (1,200 ticks) elapsed in the world.
 `$hours`      | The total number of tick-hours (72,000 ticks) elapsed in the world.
