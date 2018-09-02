@@ -1,13 +1,18 @@
 # timekeeper:next/minute
 
-# reset current second
-scoreboard players set $second_of tkeep.output 0
+# calculate increment
+scoreboard players operation $delta temp = $second_of tkeep.output
+scoreboard players set $const temp 20
+scoreboard players operation $delta temp /= $const temp
+
+# adjust second-of
+scoreboard players operation $second_of tkeep.output %= $const temp
 
 # increment total minutes
-scoreboard players add $total_minutes tkeep.output 1
+scoreboard players operation $total_minutes tkeep.output += $delta temp
 
 # increment current minute
-scoreboard players add $minute_of tkeep.output 1
+scoreboard players operation $minute_of tkeep.output += $delta temp
 
 # roll current hour, every 60 minutes
 execute if score $minute_of tkeep.output matches 60.. run function timekeeper:next/hour
