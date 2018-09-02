@@ -10,7 +10,7 @@ scoreboard players add $total_minutes tkeep.output 1
 scoreboard players add $minute_of tkeep.output 1
 
 # roll current hour, every 60 minutes
-execute if score $minute_of tkeep.output matches 60 run function timekeeper:next/hour
+execute if score $minute_of tkeep.output matches 60.. run function timekeeper:next/hour
 
 # emit event
 function #timekeeper:hooks/every/minute

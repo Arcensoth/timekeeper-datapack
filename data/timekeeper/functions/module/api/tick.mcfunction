@@ -13,4 +13,4 @@ execute unless score $daytime tkeep.cache = $daytime tkeep.output run function t
 scoreboard players add $tick_of tkeep.output 1
 
 # roll current second, every 20 ticks
-execute if score $tick_of tkeep.output matches 20 run function timekeeper:next/second
+execute if score $tick_of tkeep.output matches 20.. run function timekeeper:next/second

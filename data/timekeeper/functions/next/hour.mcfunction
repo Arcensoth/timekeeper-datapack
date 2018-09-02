@@ -10,7 +10,7 @@ scoreboard players add $total_hours tkeep.output 1
 scoreboard players add $hour_of tkeep.output 1
 
 # roll current day, every 24 hours
-execute if score $hour_of tkeep.output matches 24 run function timekeeper:next/day
+execute if score $hour_of tkeep.output matches 24.. run function timekeeper:next/day
 
 # emit event
 function #timekeeper:hooks/every/hour
