@@ -45,9 +45,10 @@ Fakeplayer        | Description
 `$delta`          | Holds the number of units passed in the most recent interval.
 
 ## Entity Tags
-Entity Tag          | Description
-------------------- | -----------
-`timekeeper.debug`  | Present on players who are debugging the module.
+Entity Tag                  | Description
+--------------------------- | -----------
+`timekeeper.debug`          | Present on players who are debugging the module.
+`timekeeper.debug.interval` | Present on players who are debugging intervals specifically.
 
 ## Event Hooks
 ### Day-night Cycle
