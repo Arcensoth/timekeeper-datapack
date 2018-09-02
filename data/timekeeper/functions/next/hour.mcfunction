@@ -5,4 +5,4 @@ execute if score $minute_of tkeep.output matches 61.. run function timekeeper:ne
 
 function #timekeeper:hooks/every/hour
 
-execute if score $minute_of tkeep.output matches 24.. run function timekeeper:next/day
+execute if score $hour_of tkeep.output matches 24.. run function timekeeper:next/day

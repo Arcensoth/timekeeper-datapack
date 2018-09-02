@@ -5,4 +5,4 @@ execute if score $hour_of tkeep.output matches 25.. run function timekeeper:next
 
 function #timekeeper:hooks/every/day
 
-execute if score $hour_of tkeep.output matches 7.. run function timekeeper:next/week
+execute if score $day_of tkeep.output matches 7.. run function timekeeper:next/week
