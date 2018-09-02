@@ -42,6 +42,7 @@ Fakeplayer        | Description
 `$hour_of`        | The current hour-of-the-day (`0..24`).
 `$day_of`         | The current day-of-the-week (`0..7`).
 `$week_of`        | The current week, equivalent to `$weeks` in the absence of further granularity.
+`$delta`          | Holds the number of units passed in the most recent interval.
 
 ## Entity Tags
 Entity Tag          | Description
@@ -91,6 +92,8 @@ Value | Image           | Name
 These hooks are based on `gametime` and will run regardless of how the day-night cycle runs; i.e. they are unaffected by both the gamerule and modifications to `daytime` (e.g. with `time add` or `time set`).
 
 **Keep in mind that these are not true seconds.** These hooks are based on tick-seconds which are only equivalent to true second under the assumption that game-time is running perfectly synchronized to real-time. Technically speaking this is never truly the case, but for most purposes these assumptions work reasonably well. If you're doing something time-sensitive (e.g. a timer for speedruns) you should not use these hooks.
+
+If needed, the number of units passed will be temporarily available under fakeplayer `$delta` of the [`tkeep.output` objective](#tkeepoutput-objective).
 
 Function Tag                      | Conditions
 --------------------------------- | -----------
