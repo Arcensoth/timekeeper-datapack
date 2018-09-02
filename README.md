@@ -25,23 +25,23 @@ Objective       | Criteria  | Usage     | Description
 `tkeep.output`  | `dummy`   | Read-only | Contains output values available for reading.
 
 #### `tkeep.output` objective
-Fakeplayer    | Description
-------------- | -----------
-`$gametime`   | The total number of ticks elapsed in the world, regardless of tick speed.
-`$daytime`    | The current time-of-day, affected by cycle alterations.
-`$day`        | The number of in-game days elapsed in the world.
-`$moon`       | A number `0..7` representing the current [moon phase](#moon-phase-chart).
-`$seconds`    | The total number of tick-seconds (20 ticks) elapsed in the world.
-`$minutes`    | The total number of tick-minutes (1,200 ticks) elapsed in the world.
-`$hours`      | The total number of tick-hours (72,000 ticks) elapsed in the world.
-`$days`       | The total number of tick-days (1,728,000 ticks) elapsed in the world.
-`$weeks`      | The total number of tick-weeks (12,096,000 ticks) elapsed in the world.
-`$tick`       | The current tick-of-the-second (`0..20`).
-`$second`     | The current second-of-the-minute (`0..60`).
-`$minute`     | The current minute-of-the-hour (`0..60`).
-`$hour`       | The current hour-of-the-day (`0..24`).
-`$day`        | The current day-of-the-week (`0..7`).
-`$week`       | The current week, equivalent to `$weeks` in the absence of further granularity.
+Fakeplayer        | Description
+----------------- | -----------
+`$gametime`       | The total number of ticks elapsed in the world, regardless of tick speed.
+`$daytime`        | The current time-of-day, affected by cycle alterations.
+`$day`            | The number of in-game days elapsed in the world.
+`$moon_phase`     | A number `0..7` representing the current [moon phase](#moon-phase-chart).
+`$total_seconds`  | The total number of tick-seconds (20 ticks) elapsed in the world.
+`$total_minutes`  | The total number of tick-minutes (1,200 ticks) elapsed in the world.
+`$total_hours`    | The total number of tick-hours (72,000 ticks) elapsed in the world.
+`$total_days`     | The total number of tick-days (1,728,000 ticks) elapsed in the world.
+`$total_weeks`    | The total number of tick-weeks (12,096,000 ticks) elapsed in the world.
+`$tick_of`        | The current tick-of-the-second (`0..20`).
+`$second_of`      | The current second-of-the-minute (`0..60`).
+`$minute_of`      | The current minute-of-the-hour (`0..60`).
+`$hour_of`        | The current hour-of-the-day (`0..24`).
+`$day_of`         | The current day-of-the-week (`0..7`).
+`$week_of`        | The current week, equivalent to `$weeks` in the absence of further granularity.
 
 ## Entity Tags
 Entity Tag          | Description
@@ -54,7 +54,7 @@ Function Tag                            | Conditions
 --------------------------------------- | -----------
 `#timekeeper:hooks/newday`              | Run by the server whenever a new day is detected (any time).
 `#timekeeper:hooks/time/start`          | Run by the server at the start of each day (time `0`).
-`#timekeeper:hooks/time/before_morning` | Run by the server daily just before `morning` (time `999`) AKA when the night is passed naturally.
+`#timekeeper:hooks/time/before_morning` | Run by the server daily just before `morning` (time `999`) AKA when the night passes without sleeping.
 `#timekeeper:hooks/time/morning`        | Run by the server daily at `morning` (time `1000`).
 `#timekeeper:hooks/time/noon`           | Run by the server daily at `noon` (time `6000`).
 `#timekeeper:hooks/time/night`          | Run by the server daily at `night` (time `13000`).
