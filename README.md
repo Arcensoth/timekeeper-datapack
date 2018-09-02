@@ -85,7 +85,7 @@ Value | Image           | Name
 `6`   | ![Moon Phase 6] | First Quarter
 `7`   | ![Moon Phase 7] | Waxing Gibbous
 
-(These images assume you are looking into the western sky... and that you're upside-down.)
+(These images assume you're facing west... and upside-down.)
 
 ### Repeating Interval
 These hooks are based on `gametime` and will run regardless of how the day-night cycle runs; i.e. they are unaffected by both the gamerule and modifications to `daytime` (e.g. with `time add` or `time set`).
