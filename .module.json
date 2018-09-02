@@ -1,7 +1,7 @@
 {
   "title": "Timekeeper",
   "description": "Time tracking and day-night cycle hooks.",
-  "version": "0.0.1-dev",
+  "version": "0.0.1",
   "namespace": "timekeeper",
   "scorespace": "tkeep",
   "authors": {
